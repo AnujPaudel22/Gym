@@ -7,6 +7,7 @@ import { IoMdClose } from 'react-icons/io'
 import { CiMenuBurger } from 'react-icons/ci'
 import ResponsiveMenu from './ResponsiveMenu'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [showMenu, setMenu]= useState(false)
@@ -20,7 +21,10 @@ const Navbar = () => {
             <span className='text-primary dark:text-white'>+977-9861611322</span>
         </div>
         <div>
-          <img src={logo} alt="Logo" className='w-22'/>
+          <Link to="/">
+              <img src={logo} alt="Logo" className='w-22'/>
+          </Link>
+          
         </div>
         <nav className='hidden md:flex items-center text-primary dark:text-white '>
           <ul className='flex gap-8 m-5'>
